@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+console.log()
+console.log(
+  require('fs').readFileSync(
+    require('path').join(__dirname, '../assets/logo.art'),
+    'utf8'
+  )
+)
+
+console.log(`
+  用法示例
+    $ hsb <command> <options>
+
+  命令说明
+    $ hsb <command> --help
+    $ hsb <command> -h
+
+  参数
+    --version, -v 打印版本号
+
+  命令表
+    init          Create a project folder
+    dev           Start a dev server for your App
+    build         Build your app for production
+    clean         Clean all build artifacts
+    new           Quickly scaffold page/layout/component/... vue file
+    mode          Add/remove Quasar Modes for your App
+    info          Display info about your machine and your App
+    serve         Create an ad-hoc server on App's distributables
+    help          Displays this message
+`)
